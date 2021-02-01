@@ -60,10 +60,14 @@ class ToDoFileProcess {
 การอ่านข้อมูลจากไฟล์
 
 ```dart
-// Crate File Processor Object
+// Crate file processor object
 ToDoFileProcess fileProcess = ToDoFileProcess();
 
+// Read data from file
 String todoStr = await fileProcess.readTodo();
+
+// Convert string to Json Object
+jsonData = json.decode(todoStr);
 ```
 
 การเขียนบันทึกข้อมูลลงไฟล์ในรูปแบบ JSON
@@ -85,10 +89,10 @@ Map<String, dynamic> existTodo = {
 
 list.add(existTodo);
 
-// Convert List to JSON
+// Convert list to JSON
 var todo = jsonEncode(list);
 
-// Write Json to File
+// Write Json to file
 fileProcess.writeTodo(todo.toString());
 ```
 
