@@ -67,7 +67,7 @@ String todoStr = await fileProcess.readTodo();
 ```
 
 การเขียนบันทึกข้อมูลลงไฟล์ในรูปแบบ JSON
-- นำข้อมูลมาใส่ในโครงสร้่าง MAP
+- นำข้อมูลมาใส่ในโครงสร้าง MAP
 - นำ MAP มาบรรจุไว้ใน List
 - แปลง List ให้กลายเป็น Json Object
 - แปลง Json Object ให้เป็นสตริงและเขียนลงไฟล์
