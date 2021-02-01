@@ -57,11 +57,32 @@ class ToDoFileProcess {
 } //end class
 ```
 
-การใช้งาน
+การอ่านข้อมูลจากไฟล์
 
 ```dart
 // Crate File Processor Object
   ToDoFileProcess fileProcess = ToDoFileProcess();
 
   String todoStr = await fileProcess.readTodo();
+```
+
+การเขียนบันทึกข้อมูลลงไฟล์ในรูปแบบ JSON
+```dart
+List<Map> list = [];
+
+Map<String, dynamic> existTodo = {
+    'id': item['id'],
+    'title': item['title'],
+    'date': item['date'],
+    'time': item['time'],
+    'status': item['status']
+};
+
+list.add(existTodo);
+
+// Convert List to JSON
+var todo = jsonEncode(list);
+
+// Write Json to File
+fileProcess.writeTodo(todo.toString());
 ```
