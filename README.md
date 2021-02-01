@@ -61,9 +61,9 @@ class ToDoFileProcess {
 
 ```dart
 // Crate File Processor Object
-  ToDoFileProcess fileProcess = ToDoFileProcess();
+ToDoFileProcess fileProcess = ToDoFileProcess();
 
-  String todoStr = await fileProcess.readTodo();
+String todoStr = await fileProcess.readTodo();
 ```
 
 การเขียนบันทึกข้อมูลลงไฟล์ในรูปแบบ JSON
