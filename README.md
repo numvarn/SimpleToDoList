@@ -56,3 +56,12 @@ class ToDoFileProcess {
   }
 } //end class
 ```
+
+การใช้งาน
+
+```dart
+// Crate File Processor Object
+  ToDoFileProcess fileProcess = ToDoFileProcess();
+
+  String todoStr = await fileProcess.readTodo();
+```
