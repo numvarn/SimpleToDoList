@@ -67,6 +67,11 @@ String todoStr = await fileProcess.readTodo();
 ```
 
 การเขียนบันทึกข้อมูลลงไฟล์ในรูปแบบ JSON
+- นำข้อมูลมาใส่ในโครงสร้่าง MAP
+- นำ MAP มาบรรจุไว้ใน List
+- แปลง List ให้กลายเป็น Json Object
+- แปลง Json Object ให้เป็นสตริงและเขียนลงไฟล์
+
 ```dart
 List<Map> list = [];
 
@@ -86,3 +91,4 @@ var todo = jsonEncode(list);
 // Write Json to File
 fileProcess.writeTodo(todo.toString());
 ```
+
